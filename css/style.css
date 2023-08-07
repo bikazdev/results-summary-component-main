@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-ligth-red: 0, 100%, 67%;
+  --primary-orangey-yellow: 39, 100%, 56%;
+  --primary-green-teal: 166, 100%, 37%;
+  --primary-cobalt-blue: 234, 85%, 45%;
+  --neutral-white: 0, 0%, 100%;
+  --neutral-pale-blue: 221, 100%, 96%;
+  --neutral-light-lavender: 241, 100%, 89%;
+  --neutral-dark-gray-blue: 224, 30%, 27%;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 36rem;
+  height: 25rem;
+  display: flex;
+  background-color: var(--neutral-white);
+  border-radius: 1.5rem;
+  box-shadow: .3rem .2rem 1rem rgba(0, 0, 0, 0.050);
+}
+
+.resault {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem 0;
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  border-radius: 1.5rem;
+  color: hsla(var(--neutral-white));
+}
+
+.resault .header-and-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.resault .header-and-circle h5 {
+  font-size: 1.1rem;
+  color: hsla(var(--neutral-light-lavender));
+}
+.resault .circle {
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+        to top,
+    hsla(241, 72%, 46%, 0),
+    hsla(256, 72%, 46%, 1)
+  );
+  border-radius: 50%;
+  line-height: 1.2;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.resault .circle span {
+    font-weight: 300;
+    font-size: .8rem;
+    color: hsla(var(--neutral-light-lavender));
+    opacity: .5;
+    
+}
+
+.resault .para {
+    width: 12rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.resault .para h5 {
+    font-size: 1.5rem;
+}
+.resault .para p {
+    opacity: .7;
+}
+
+.summary {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  
+
+}
+
+.summary .sum-header {
+  width: 75%;
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 800;
+  color: hsla(var(--neutral-dark-gray-blue));
+}
+
+.summary .sum-plan .data {
+    height: 2.6rem;
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0 .8rem;
+    gap: 4rem;
+    border-radius: .4rem;
+}
+.summary .sum-plan .data img {
+  transform: scale(90%);
+  
+}
+
+.summary .sum-plan .data span {
+  font-size: .8rem;
+  font-weight: 800;
+  color: hsla(var(--neutral-dark-gray-blue));
+}
+
+.summary .sum-plan .data span span {
+  color: hsla(var(--neutral-dark-gray-blue), .5);
+}
+
+.summary .sum-plan .data:nth-child(1){
+  background: hsla(var(--primary-ligth-red), .05);
+  color: hsla(var(--primary-ligth-red));
+}
+.summary .sum-plan .data:nth-child(2){
+  background: hsla(var(--primary-orangey-yellow), .05);
+  color: hsla(var(--primary-orangey-yellow));
+}
+.summary .sum-plan .data:nth-child(3){
+  background: hsla(var(--primary-green-teal), .05);
+  color: hsla(var(--primary-green-teal));
+}
+.summary .sum-plan .data:nth-child(4){
+  background: hsla(var(--primary-cobalt-blue), .05);
+  color: hsla(var(--primary-cobalt-blue));
+}
+
+.summary .data div {
+    display: flex;
+    gap: .5rem;
+}
+
+.summary button {
+  width: 75%;
+  height: 2.5rem;
+  border: transparent;
+  border-radius: 2rem;
+  outline: none;
+  font-weight: 700;
+  color: hsla(var(--neutral-white));
+  background: hsla(var(--neutral-dark-gray-blue));
+  cursor: pointer;
+
+}
+
+.summary button:active {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media screen and (max-width: 500px){
+  main {
+    width: fit-content;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .container {
+    width: 100vw;
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .resault {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    gap: 1rem;
+  }
+  .resault .header-and-circle {
+    gap: .5rem;
+  }
+
+  .resault .header-and-circle h5 {
+    font-size: .9rem;
+  }
+
+  .resault .circle {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .resault .para {
+    width: 15rem;
+    gap: 0.5rem;
+  }
+  .resault .para h5 {
+    font-size: 1.2rem;
+  }
+
+  .summary {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .summary .sum-header {
+    width: 80%;
+  }
+
+  .summary .sum-plan {
+    width: 80%;
+  }
+
+  .summary button {
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media screen and (max-height: 500px) {
+  main {
+    align-items: flex-start;
+  }
+}
